@@ -1,11 +1,11 @@
-class CustomAnhor extends HTMLAnchorElement {
+class CustomAnchor extends HTMLAnchorElement {
     constructor() {
         super();
-        console.log("My Custom Element constructed!");
+        console.log("Extended Anchor Element constructed!");
     }
 
     connectedCallback() {
-        console.log("My custome element connected to the DOM");
+        console.log("Extended Anchor element connected to the DOM");
         this.addEventListener("click", e => {
             e.preventDefault();
             const result = confirm("Are you sure you would like to navigate to:" + e.target.href);
@@ -14,17 +14,17 @@ class CustomAnhor extends HTMLAnchorElement {
             }
         });
     }
-    disconnectedCallback() {
-        console.log("My custome element connected to the DOM");
-    }
+    // disconnectedCallback() {
+    //     console.log("Extended Anchor element connected to the DOM");
+    // }
 
-    static get; observedAttributes() {
-        return ["demo"];
-    }
+    // static get; observedAttributes() {
+    //     return ["demo"];
+    // }
 
-    attributeChangedCallback(name, oldValue, newValue) {
-        console.log("attribute changed", name, oldValue, newValue);
-    }
+    // attributeChangedCallback(name, oldValue, newValue) {
+    //     console.log("attribute changed", name, oldValue, newValue);
+    // }
 }
 
-window.customElements.define("custom-anchor", CustomAnhor, {extends: "a"});
+window.customElements.define("x-anchor", CustomAnchor, {extends: "a"});
