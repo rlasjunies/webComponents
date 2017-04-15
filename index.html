@@ -6,11 +6,23 @@
     <script src="customElement.js"></script>
     <script src="extendHTMLElement.js"></script>
     <script src="node_modules/document-register-element/document-register-element.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<my-custom-element></my-custom-element> 
-<mce-extended></mce-extended>
+    <div class="flexCol">
+        <div class="flexRow">
+            Custom Element:
+            <my-custom-element></my-custom-element>
+        </div>
+        <div class="flexRow">
+            Extended Custom Element:
+            <mce-extended></mce-extended>
+        </div>
+        <div class="flexRow">
+            Extended Anchor Element: <a is="custom-anchor" href="http://google.com">Go to google</a>
+        </div>
+    </div>
 </body>
 
 </html>
