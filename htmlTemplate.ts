@@ -1,5 +1,5 @@
 
-window.onload = (e) => {
+function HTMLTemplate() {
     const movies = [
         {
             title: "Harry Potter",

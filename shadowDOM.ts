@@ -1,4 +1,4 @@
-window.onload = (e) => {
+function shadowDOM() {
     const $div = document.getElementById("simple-div");
 
     $div.attachShadow({ mode: "open" });
@@ -10,4 +10,4 @@ window.onload = (e) => {
     </style>
     <p>Contenu du shadow DOM</p>
 `;
-};
+}

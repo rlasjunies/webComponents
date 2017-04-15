@@ -8,7 +8,9 @@
     <script src="customElement.js"></script>
     <script src="extendHTMLElement.js"></script>
     <script src="shadowDOM.js"></script>
+    <script src="component.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="import" href="component.html" id="MyComponent">
 </head>
 
 <body>
@@ -49,7 +51,19 @@
             </div>
         </div>
 
+        <div class="flexRow" id="componentContainer">
+
+        </div>
+
     </div>
+
+    <script>
+        window.onload = (e) =>{
+            shadowDOM();
+            HTMLTemplate();
+            component();
+        }
+    </script>
 </body>
 
 </html>
