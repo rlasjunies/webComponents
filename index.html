@@ -4,6 +4,7 @@
 <head>
     <title>webComponents</title>
     <script src="node_modules/document-register-element/build/document-register-element.js"></script>
+    <script src="htmlTemplate.js"></script>
     <script src="customElement.js"></script>
     <script src="extendHTMLElement.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -23,15 +24,20 @@
             Custom Element:
             <my-custom-element></my-custom-element>
         </div>
-        
+
         <div class="flexRow">
             Extended Custom Element:
             <mce-extended></mce-extended>
         </div>
-        
+
         <div class="flexRow">
             Extended Anchor Element: <a is="x-anchor" href="http://google.com">Go to google</a>
         </div>
+
+        <div class="flexRow">
+            <ul id="movies"></ul>
+        </div>
+
     </div>
 </body>
 
