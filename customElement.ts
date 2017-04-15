@@ -5,10 +5,10 @@ class MyCustomElement extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log("My custome element connected to the DOM");
+        console.log("My custom element connected to the DOM");
     }
     disconnectedCallback() {
-        console.log("My custome element connected to the DOM");
+        console.log("My custome element disconnected to the DOM");
     }
 
     static get observedAttributes() {
