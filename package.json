@@ -1,0 +1,15 @@
+{
+  "name": "webComponents",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Richard Lasjunies <rlasjunies@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "document-register-element": "^1.4.1",
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.1.0",
+    "typescript": "^2.2.2"
+  }
+}
