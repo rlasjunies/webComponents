@@ -9,6 +9,7 @@
     <script src="extendHTMLElement.js"></script>
     <script src="shadowDOM.js"></script>
     <script src="component.js"></script>
+    <script src="starRating.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="import" href="component.html" id="MyComponent">
 </head>
@@ -22,7 +23,11 @@
     </template>
 
 
+
     <div class="flexCol">
+        <div class="flexRow">
+            Start rating:<rl-star-rating></rl-star-rating>
+        </div>
         <div class="flexRow">
             Custom Element:
             <my-custom-element></my-custom-element>
