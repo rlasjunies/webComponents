@@ -10,6 +10,8 @@
     <script src="shadowDOM.js"></script>
     <script src="component.js"></script>
     <script src="starRating.js"></script>
+    <script src="slideMenu.js"></script>
+    <script src="onLoad.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="import" href="component.html" id="MyComponent">
 </head>
@@ -22,11 +24,20 @@
         </li>
     </template>
 
-
-
+    <rl-slide-menu id="menu">
+        <a href="#">One test</a>
+        <a href="#">Two</a>
+        <a href="#">Three</a>
+    </rl-slide-menu>
     <div class="flexCol">
+        <div class="flexRowRight">
+            <button data-action="open" id="btnOpen">Open</button>
+            <button data-action="close" id="btnClose">Close</button>
+        </div>
+
         <div class="flexRow">
-            Start rating:<rl-star-rating></rl-star-rating>
+            Start rating:
+            <rl-star-rating></rl-star-rating>
         </div>
         <div class="flexRow">
             Custom Element:
@@ -63,10 +74,8 @@
     </div>
 
     <script>
-        window.onload = (e) =>{
-            shadowDOM();
-            HTMLTemplate();
-            component();
+        window.onload = (e) => {
+            onLoad();
         }
     </script>
 </body>

@@ -1,9 +1,10 @@
 
 .flexCol{
     display:flex;
-    flex-direction:column
+    flex-direction:column;
 }
-.flexRow{
+.flexRowRight{
     display:flex;
-    flex-direction:row
+    flex-direction:row;
+    justify-content: flex-end;
 }

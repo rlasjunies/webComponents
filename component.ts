@@ -1,4 +1,4 @@
-function component(e) {
+function component() {
 
     const $link = document.getElementById("MyComponent");
     const myComp = <Node>$link.import.querySelector(".component");

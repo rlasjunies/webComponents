@@ -1,69 +1,60 @@
 <style>
-     :host {
-        width: 10em;
-        height: 2em;
-        display: inline-block;
+    .frame {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
         overflow: hidden;
-        user-select: none;
-        vertical-align: middle;
-        box-sizing: border-box;
+        pointer-events: none;
+        z-index: 1000;
+        transition: background-color 300ms ease-in;
     }
     
     .container {
-        color: #c500c5;
-        font-size: 2em;
-        line-height: 1em;
-        margin: 0 auto;
-        position: relative;
-        padding: 0;
+        width: 80%;
+        max-width: 400px;
+        background: #FFF;
+        height: 100%;
+        transform: translateX(-100%);
+        will-change: transform;
+        transition: transform 300ms easi-in;
+        box-shadow: 1px 0 3px rgba(51, 51, 51, 0, 25);
+    }
+    
+    .title {
+        display: flex;
+        flex-direction: row;
+        min-height: 3.2em;
+        font-size: 1.5em;
+        background-color: #F1F1F1;
+        color: #666;
+    }
+    
+    .title .title-content {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        padding-left: 1em;
+    }
+
+    .close {
+        flex-basis: 100px;
+        flex-grow: 0;
+        flex-shrink: 0;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none; 
     }
-    
-    .container .top {
-        color: #e7bd06;
-        padding: 0;
-        position: absolute;
-        z-index: 1;
-        display: block;
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        width: 0;
+
+    .frame.open {
+        pointer-events: auto;
+        background-color: rgba(0,0,0,0.25);
+    } 
+
+    .frame.open .container {
+        transform: none;
     }
-    
-    .container:hover .top {
-        display: none;
-    }
-    
-    .container .bottom {
-        padding: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        unicode-bidi: bidi-override;
-        direction: rtl;
-    }
-    
-    .container .bottom>span:hover,
-    .container .bottom>span:hover~span {
-        color: #e7bd06;
-    }
+
 </style>
-<div class="container">
-    <div class="top">
-        <span>⋆</span><span>⋆</span><span>⋆</span><span>⋆</span><span>⋆</span>
-    </div>
-    <div class="bottom">
-        <span data-value="5">⋆</span>
-        <span data-value="4">⋆</span>
-        <span data-value="3">⋆</span>
-        <span data-value="2">⋆</span>
-        <span data-value="1">⋆</span>
-    </div>
-</div>
-
-:host([disabled]) .container{
-    cursor: inherit;
-}
-
