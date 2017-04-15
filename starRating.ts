@@ -119,7 +119,12 @@ class RlStarRating extends HTMLElement {
                     this.value = event.target.dataset.value;
                 }
             }
-        })
+        });
+        const initialValue = parseInt(this.getAttribute("value"));
+        if ( !initialValue !== null) {
+            this._value = initialValue;
+            this._render();
+        }
     }
 
     _render() {
@@ -128,7 +133,7 @@ class RlStarRating extends HTMLElement {
         }
     }
     static get observedAttributes() {
-        return ["disabled"];
+        return ["disabled", "value"];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
@@ -136,6 +141,10 @@ class RlStarRating extends HTMLElement {
             switch (name) {
                 case "disabled":
                     this._disabled = (newValue !== null);
+                    break;
+                case "value":
+                    this._value = parseInt(newValue);
+                    this._render();
                     break;
             }
         }
